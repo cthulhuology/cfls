@@ -6,11 +6,11 @@ CloudFiles ls
 Getting Started
 ---------------
 
-	cfcp cf://container/
+	cfls cf://container/
 
 Returns a listing for a container's contents
 
-To configure you can create a ~/.cfcprc config javascript:
+To configure you can create a ~/.cfrc config javascript:
 
 	module.exports = {
 		cf: {
