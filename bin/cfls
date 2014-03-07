@@ -1,3 +1,13 @@
 #!/usr/bin/env node
+//
+// (C) 2014 David J. Goehrig <dave@dloh.org>
+//
 
-require('cfls')()
+if (process.argv.length < 3) {
+	console.log("Usage: " + process.argv[1] + " container") 
+	process.exit(0)
+}
+
+configs = require( process.env['HOME'] + "/.cfrc")
+
+require('cfls').apply(global,[ process.argv[2], configs ])
